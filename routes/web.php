@@ -24,6 +24,9 @@ Route::get('/info-ajar', [PageController::class, 'infoajar'])->name('info.ajar')
 // 4. Rute Statistik
 Route::get('/statistik', [PageController::class, 'statistik'])->name('statistik');
 
+// 5. Rute Formulir
+Route::get('/formulir', [PageController::class, 'formulir'])->name('formulir');
+
 // 5. Rute Dashboard User Biasa (dari Breeze)
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -30,5 +30,10 @@ class PageController extends Controller
     {
         return view('statistik');
     }
+    // menampilkan halaman formulir
+    public function formulir(): View
+    {
+        return view('formulir');
+    }
 
 }
