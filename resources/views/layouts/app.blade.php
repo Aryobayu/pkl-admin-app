@@ -148,7 +148,7 @@
                 <a href="{{ route('info.ajar') }}" class="text-gray-600 hover:text-blue-600">INFO AJAR</a>
                 <a href="{{ route('Profil.Widyaiswara') }}" class="text-gray-600 hover:text-blue-600">PROFIL WIDYAISWARA</a>
                 <a href="{{ route('statistik') }}" class="text-gray-600 hover:text-blue-600">STATISTIK</a>
-                <a href="{{ route('formulir') }}" class="text-gray-600 hover:text-blue-600">FORMULIR</a>
+                <a href="{{ route('formulir.create') }}" class="text-gray-600 hover:text-blue-600">FORMULIR</a>
             </nav>
             
             <!-- Kanan: Tombol Login/Register atau Dropdown User -->

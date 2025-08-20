@@ -5,6 +5,7 @@ use App\Http\Controllers\WidyaiswaraController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\FormulirController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +26,10 @@ Route::get('/info-ajar', [PageController::class, 'infoajar'])->name('info.ajar')
 Route::get('/statistik', [PageController::class, 'statistik'])->name('statistik');
 
 // 5. Rute Formulir
-Route::get('/formulir', [PageController::class, 'formulir'])->name('formulir');
+// Route::get('/formulir', [PageController::class, 'formulir'])->name('formulir');
+Route::get('/formulir', [FormulirController::class, 'create'])->name('formulir.create');
+Route::post('/formulir', [FormulirController::class, 'store'])->name('formulir.store');
+
 
 // 5. Rute Dashboard User Biasa (dari Breeze)
 Route::get('/dashboard', function () {

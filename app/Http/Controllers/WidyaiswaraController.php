@@ -306,7 +306,7 @@ class WidyaiswaraController extends Controller
 
 
             [
-                 'photo' => asset('images/Dr. Ir. SUPRIYANTO, M.Si.jpeg'),
+                 'photo' => asset('images/Dr. Ir. SUPRIYANTO, M.Si.jpeg'), 
                 'name' => 'Dr. Ir. SUPRIYANTO, M.Si.',
                 'nip' => '196205171991031004',
                 'jabatan_singkat' => 'WIDYAISWARA AHLI UTAMA',
