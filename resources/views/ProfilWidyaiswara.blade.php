@@ -38,7 +38,7 @@
 
                 <section class="profile_grid mt-12">
             @foreach ($profiles as $profile)
-            <div 
+            <div
                 class="profile_card cursor-pointer open-modal-button"
                 {{-- == PERBAIKAN 1: Merapikan Atribut data-jabatan == --}}
                 data-jabatan="{{ $profile['jabatan_singkat'] }}"   {{-- Digunakan oleh Filter & Search --}}

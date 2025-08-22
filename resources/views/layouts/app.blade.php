@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@yield('title', 'PAK Wi Online')</title>
 
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -132,6 +135,7 @@
         background-repeat: no-repeat;
       }
     </style>
+    @stack('styles')
 </head>
 <body class="bg-gray-50">
     <div class="min-h-screen flex flex-col">
@@ -141,14 +145,14 @@
             <!-- Kiri: Logo -->
             <a href="{{ route('home') }}" class="flex items-center gap-3">
                 <h1 class="text-xl font-bold text-[var(--text-primary)] hidden sm:block">PAK Wi Online</h1>
-            </a>
-
-            <!-- Tengah: Menu Navigasi Utama -->
-            <nav class="flex items-center gap-6 text-sm font-medium">
-                <a href="{{ route('info.ajar') }}" class="text-gray-600 hover:text-blue-600">INFO AJAR</a>
+                <a href="{{ route("formulir.create") }}" class="text-gray-600 hover:text-blue-600">FORMULIR</a>
                 <a href="{{ route('Profil.Widyaiswara') }}" class="text-gray-600 hover:text-blue-600">PROFIL WIDYAISWARA</a>
                 <a href="{{ route('statistik') }}" class="text-gray-600 hover:text-blue-600">STATISTIK</a>
+<<<<<<< HEAD
                 <a href="{{ route('formulir.create') }}" class="text-gray-600 hover:text-blue-600">FORMULIR</a>
+=======
+                <a href="{{ route('formulir') }}" class="text-gray-600 hover:text-blue-600">FORMULIR</a>
+>>>>>>> 7aa5bd2 (feat: Menambahkan data materi dan jenis diklat pada WidyaiswaraController)
             </nav>
             
             <!-- Kanan: Tombol Login/Register atau Dropdown User -->
@@ -156,8 +160,8 @@
                 @guest
                     {{-- Jika tamu, tampilkan Login & Register --}}
                     <div class="flex items-center gap-4">
-                        <a href="{{ route('login') }}" class="text-sm font-semibold text-gray-700">Login</a>
-                        <a href="{{ route('register') }}" class="rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500">Register</a>
+                        <a href="{{ route('login') }}" class="text-sm font-medium text-gray-600">Login</a>
+                        <a href="{{ route('register') }}" class="rounded-md bg-blue-600 px-3 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-500">Register</a>
                     </div>
                 @endguest
 
@@ -221,6 +225,9 @@
     @endauth
 
     @yield('footer-scripts')
+    
+    <!-- Bootstrap 5 JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
 </body>
 </html>
